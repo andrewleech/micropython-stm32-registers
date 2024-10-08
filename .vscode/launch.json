@@ -5,11 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: stm_register_builder",
-            "type": "python",
+            "name": "stm_register_builder list",
+            "type": "debugpy",
             "request": "launch",
             "program": "stm_register_builder.py",
-            "args": ["stm32wb55", "signal_gen/stm_dma_timer.py"],
+            "args": ["stm32f405", "--list"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "stm_register_builder stm32wb55 FLASH",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "stm_register_builder.py",
+            "args": ["stm32wb55", "FLASH", "FLASH_OPTKEY*"],
             "console": "integratedTerminal",
             "justMyCode": true
         }
