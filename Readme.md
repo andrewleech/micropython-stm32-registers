@@ -12,7 +12,7 @@ definitions acting like a wrapper around the uctypes definitions.
 The register builder tool is run on desktop with cpython, directly 
 from this repo, eg.
 ``` bash
-$ python3 stm_register_builder.py stm32wb55 DMA2* FLASH_*
+$ python3 stm_register_builder.py stm32wb55 DMA2* FLASH FLASH*KEY*
 ```
 
 Available registers can be listed like so:
