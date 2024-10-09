@@ -169,7 +169,8 @@ def __register_file_generator(
             continue
         comment = ""
         if "//" in details or "/*" in details:
-            details, comment = re.split(r"/[*/]", details)
+            details, *comments = re.split(r"/[*/]", details)
+            comment = " ".join(comments)
         if comment:
             comment = "  # " + comment.strip("/*!< ")
 
